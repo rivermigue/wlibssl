@@ -13,7 +13,7 @@ RUN apt-get update \
     && apt-get update \
     && apt install -y --install-recommends winehq-stable
     
-RUN groupadd -g 1000 bedrock && adduser -u 1000 bedrock && usermod -a -G bedrock bedrock
+RUN groupadd -g 1000 bedrock && adduser -u 1000 bedrock
 
 ENV WINEPREFIX=/root
 ENV WINEDLLOVERRIDES=vcruntime140_1,vcruntime140=n;mscoree,mshtml,explorer.exe,winemenubuilder.exe,services.exe,playplug.exe=d
