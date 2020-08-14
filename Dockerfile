@@ -16,5 +16,4 @@ RUN apt-get update \
 ENV WINEPREFIX=/root
 ENV WINEDLLOVERRIDES=vcruntime140_1,vcruntime140=n;mscoree,mshtml,explorer.exe,winemenubuilder.exe,services.exe,playplug.exe=d
 ENV WINEDEBUG=-all
-ENV PATH=/bin:/opt/wine/bin
 USER 1000:1000
