@@ -16,7 +16,7 @@ RUN apt-get update \
 RUN adduser -u 1000 bedrock
 RUN usermod -a -G bedrock bedrock
 
-ENV WINEPREFIX=~/.wine
+ENV WINEPREFIX=/home/bedrock
 ENV WINEDLLOVERRIDES=vcruntime140_1,vcruntime140=n;mscoree,mshtml,explorer.exe,winemenubuilder.exe,services.exe,playplug.exe=d
 ENV WINEDEBUG=-all
 USER 1000:1000
