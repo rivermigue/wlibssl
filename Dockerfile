@@ -12,6 +12,8 @@ RUN apt-get update \
     && add-apt-repository ppa:cybermax-dexter/sdl2-backport \
     && apt-get update \
     && apt install -y --install-recommends winehq-stable
+    
+RUN groupadd -g 1000 bedrock && adduser -G bedrock -u 1000 bedrock
 
 ENV WINEPREFIX=/root
 ENV WINEDLLOVERRIDES=vcruntime140_1,vcruntime140=n;mscoree,mshtml,explorer.exe,winemenubuilder.exe,services.exe,playplug.exe=d
