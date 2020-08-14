@@ -13,7 +13,6 @@ RUN apt-get update \
     && apt-get update \
     && apt install -y --install-recommends winehq-stable
 
-ADD multi:babe13f2a5f03ebfe3c1186141a5839f7fa30bfb2ac4509ccd6266936aac34d3 in /root/drive_c/windows/system32/
 ENV WINEPREFIX=/root
 ENV WINEDLLOVERRIDES=vcruntime140_1,vcruntime140=n;mscoree,mshtml,explorer.exe,winemenubuilder.exe,services.exe,playplug.exe=d
 ENV WINEDEBUG=-all
