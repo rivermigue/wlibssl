@@ -11,4 +11,4 @@ RUN apt-get update \
     && apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main' \
     && add-apt-repository ppa:cybermax-dexter/sdl2-backport \
     && apt-get update \
-    && apt install --install-recommends winehq-stable
+    && apt install -y --install-recommends winehq-stable
